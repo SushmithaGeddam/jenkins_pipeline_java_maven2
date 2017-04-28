@@ -8,9 +8,9 @@ node {
    // ** NOTE: This 'M3' maven tool must be configured
    // **       in the global configuration.           
    def mvnHome = tool 'Maven-3.5.0'
-   def javaHome = tool 'JAVA_HOME'
+   //def javaHome = tool 'JAVA_HOME'
 
-bat "JAVA_HOME=$javaHome $mvnHome/bin/mvn install"
+bat "$mvnHome/bin/mvn install"
 
    // Mark the code build 'stage'....
    stage 'Build'
