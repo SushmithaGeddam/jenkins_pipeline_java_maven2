@@ -15,6 +15,7 @@ bat "$mvnHome/bin/mvn install"
    // Mark the code build 'stage'....
    stage 'Build'
    // Run the maven build
-   bat "${mvnHome}\\bin\\mvn -Dmaven.test.failure.ignore clean package"
-   step([$class: 'JUnitResultArchiver', testResults: '**\\target\\surefire-reports\\TEST-*.xml'])
+  // bat "${mvnHome}\\bin\\mvn -Dmaven.test.failure.ignore clean package"
+ bat "C:\Program Files\apache-maven-3.5.0\bin\mvn -Dmaven.test.failure.ignore clean package"
+  step([$class: 'JUnitResultArchiver', testResults: '**\\target\\surefire-reports\\TEST-*.xml'])
 }
