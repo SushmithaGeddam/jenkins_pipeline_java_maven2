@@ -10,7 +10,7 @@ node {
    def mvnHome = tool 'Maven-3.5.0'
    //def javaHome = tool 'JAVA_HOME'
 
-bat "$mvnHome/bin/mvn install"
+bat "C:/Program Files/apache-maven-3.5.0/bin/mvn install"
 
    // Mark the code build 'stage'....
    stage 'Build'
